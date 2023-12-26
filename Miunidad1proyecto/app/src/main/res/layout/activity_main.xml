@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/Portada"
+        android:layout_width="151dp"
+        android:layout_height="188dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029"
+        app:srcCompat="@drawable/menu" />
+
+    <ImageView
+        android:id="@+id/Plato1"
+        android:layout_width="72dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="216dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pastel_de_choclo_chileno" />
+
+    <ImageView
+        android:id="@+id/Plato2"
+        android:layout_width="73dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="140dp"
+        app:layout_constraintStart_toStartOf="@+id/Plato1"
+        app:layout_constraintTop_toTopOf="@+id/Plato1"
+        app:srcCompat="@drawable/cazuela_de_vacuno"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/NombrePlato1"
+        android:layout_width="123dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="248dp"
+        android:text="Pastel de choclo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/NombrePlato2"
+        android:layout_width="76dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="108dp"
+        android:text="Cazuela"
+        app:layout_constraintStart_toStartOf="@+id/NombrePlato1"
+        app:layout_constraintTop_toTopOf="@+id/NombrePlato1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Cantidad1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="52dp"
+        android:text="Cant"
+        app:layout_constraintStart_toStartOf="@+id/NombrePlato1"
+        app:layout_constraintTop_toTopOf="@+id/NombrePlato1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Cantidad2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="Cant."
+        app:layout_constraintStart_toStartOf="@+id/Cantidad1"
+        app:layout_constraintTop_toTopOf="@+id/Cantidad1"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/Platos1"
+        android:layout_width="123dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="284dp"
+        android:ems="2"
+        android:hint="Ingrese la cantidad de platos para el plato 1"
+        android:inputType="numberSigned"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/Cantidad1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/Platos2"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="96dp"
+        android:ems="2"
+        android:hint="Ingrese la cantidad de platos para el plato 2"
+        android:inputType="numberSigned"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/Cantidad2"
+        app:layout_constraintTop_toTopOf="@+id/Platos1"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/DetalleComida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="480dp"
+        android:text="Comida"
+        app:layout_constraintStart_toStartOf="@+id/Portada"
+        app:layout_constraintTop_toTopOf="@+id/Portada"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TotalMonetario"
+        android:layout_width="141dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="500dp"
+        android:text="$00000.0"
+        app:layout_constraintStart_toEndOf="@+id/DetalleComida"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Detallepropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="PorcentajePropina"
+        app:layout_constraintStart_toStartOf="@+id/DetalleComida"
+        app:layout_constraintTop_toTopOf="@+id/DetalleComida" />
+
+    <TextView
+        android:id="@+id/Propina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"
+        android:text="$0.00"
+        app:layout_constraintStart_toEndOf="@+id/Detallepropina"
+        app:layout_constraintTop_toTopOf="@+id/TotalMonetario" />
+
+    <TextView
+        android:id="@+id/Resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="56dp"
+        android:text="Total"
+        app:layout_constraintEnd_toStartOf="@+id/TotalConPropina"
+        app:layout_constraintTop_toTopOf="@+id/Detallepropina" />
+
+    <TextView
+        android:id="@+id/TotalConPropina"
+        android:layout_width="84dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="52dp"
+        android:text="$0.00"
+        app:layout_constraintStart_toStartOf="@+id/Propina"
+        app:layout_constraintTop_toBottomOf="@+id/Propina" />
+
+    <Switch
+        android:id="@+id/boton1"
+        android:layout_width="94dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="184dp"
+        android:text="Aplica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Plato2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
